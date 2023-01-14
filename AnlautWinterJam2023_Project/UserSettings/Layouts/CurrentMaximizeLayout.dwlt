@@ -53,8 +53,10 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - E:\GitHub\Anlaut-Winter-Jam-2023\AnlautWinterJam2023_Project\Library\PlayModeViewStates\e01720bf4501f174f91b7258aea317b7
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -1332,6 +1334,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
     - Assets/Scenes/Story
+    - Assets/Scenes/Minigames/Cute Invaders/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
