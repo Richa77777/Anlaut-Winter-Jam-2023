@@ -49,11 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothValue: 0.2
-  _moveSpeed: 0
-  _bulletsPoolSize: 0
-  _bulletPrefab: {fileID: 0}
+  _moveSpeed: 3
+  _bulletsPoolSize: 5
+  _bulletPrefab: {fileID: 7915746535877467391, guid: 967c49208da6e2542ab5d8cdb25f9c21, type: 3}
   _bulletsParent: {fileID: 0}
-  _bulletSpawnpoint: {fileID: 0}
+  _bulletSpawnpoint: {fileID: 7527980807594462156}
 --- !u!212 &6341428608164865753
 SpriteRenderer:
   m_ObjectHideFlags: 0
