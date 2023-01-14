@@ -15,6 +15,7 @@ public class ProgressBar : MonoBehaviour
 
     public float UpdatedProgress { get => _updatedProgress; set => _updatedProgress = value; }
     public Image Progress { get => _progress; set => _progress = value; }
+    public float MaxProgress { get => _maxProgress; set => _maxProgress = value; }
 
     void Update()
     {
