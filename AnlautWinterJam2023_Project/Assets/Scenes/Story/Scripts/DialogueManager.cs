@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Ink.Runtime;
 using TMPro;
@@ -22,12 +21,6 @@ public class DialogueManager : MonoBehaviour
     private bool _canContinueToNextLine = false;
 
     private string _currentLine;
-
-    [SerializeField]
-    private GridLayoutGroup _choiceHolder;
-
-    [SerializeField]
-    private Button _choiceButtonPrefab;
 
     void Start()
     {
@@ -51,53 +44,6 @@ public class DialogueManager : MonoBehaviour
 
             _currentLine = _storyScript.Continue();
             _displayLineCoroutine = StartCoroutine(DisplayLine(_currentLine));
-        }
-
-        if(_storyScript.currentChoices.Count > 0)
-        {
-            DisplayChoices();
-        }
-    }
-
-    private void DisplayChoices()
-    {
-        if (_choiceHolder.GetComponentsInChildren<Button>().Length > 0) return;
-        
-        for(int i = 0; i < _storyScript.currentChoices.Count; i++)
-        {
-            var choice = _storyScript.currentChoices[i];
-            var button = CreateChoiceButton(choice.text);
-
-            button.onClick.AddListener(() => OnClickChoiceButton(choice));
-        }
-    }
-
-    Button CreateChoiceButton(string text)
-    {
-        var choiceButton = Instantiate(_choiceButtonPrefab);
-        choiceButton.transform.SetParent(_choiceHolder.transform, false);
-    
-        var buttonText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
-        buttonText.text = text;
-
-        return choiceButton;
-    }
-
-    void OnClickChoiceButton(Choice choice)
-    {
-        _storyScript.ChooseChoiceIndex(choice.index);
-        RefreshChoiceView();
-        DisplayNextLine();
-    }
-
-    void RefreshChoiceView()
-    {
-        if(_choiceHolder != null)
-        {
-            foreach(var button in _choiceHolder.GetComponentsInChildren<Button>())
-            {
-                Destroy(button.gameObject);
-            }
         }
     }
 
