@@ -28,10 +28,15 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     private Button _choiceButtonPrefab;
+    [SerializeField]
+    private SpriteContainer _spriteContainer;
+    [SerializeField]
+    private Image _currentArt;
 
     void Start()
     {
         LoadStory();
+        inkFunctions();
         DisplayNextLine();
     }
 
@@ -136,5 +141,17 @@ public class DialogueManager : MonoBehaviour
                 _canContinueToNextLine = true;
             }
         }
+    }
+
+    private void inkFunctions()
+    {
+        _storyScript.BindExternalFunction("image", (int idImage) =>
+        {
+            _currentArt.sprite = _spriteContainer.GetImageByID(idImage);
+        });
+        _storyScript.BindExternalFunction("sound", (int idSound) =>
+        {
+
+        });
     }
 }
