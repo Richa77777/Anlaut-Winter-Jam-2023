@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     private SpriteContainer _spriteContainer;
     [SerializeField]
     private Image _currentArt;
+    [SerializeField]
+    private TextMeshProUGUI _currentActor;
 
     void Start()
     {
@@ -54,6 +56,7 @@ public class DialogueManager : MonoBehaviour
                 StopCoroutine(_displayLineCoroutine);
             }
 
+            _currentActor.text = "";
             _currentLine = _storyScript.Continue();
             _displayLineCoroutine = StartCoroutine(DisplayLine(_currentLine));
         }
@@ -149,9 +152,15 @@ public class DialogueManager : MonoBehaviour
         {
             _currentArt.sprite = _spriteContainer.GetImageByID(idImage);
         });
+
         _storyScript.BindExternalFunction("sound", (int idSound) =>
         {
 
+        });
+
+        _storyScript.BindExternalFunction("name", (string nameActor) =>
+        {
+            _currentActor.text = nameActor;
         });
     }
 }
