@@ -233,7 +233,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2067feff7018ffff62f9ffff02fbffffe6660000fc660000086700002e670000346700006a6700009a670000a0670000a467000068e10000a0e10000
+      m_ExpandedIDs: 40aeffffceb4ffff8cb6ffff5ab8ffffb6bbffff84bcffff5abdffff2cbeffffcabeffffc0bfffffb0c0ffff9ec1ffff8cc2ffff2cc3fffff8c3ffffc8c4ffff96c5ffff72cbffff3ccdffff1ccfffffdad0ffff2ad1ffff42e4ffffcce9ffff5aeeffff16fbffffc27a00005a7d0000567e00005a7f000050800000cc800000ba810000aa820000ac830000a084000016850000128600000a870000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -317,7 +317,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -171, y: -26}
+      snapOffset: {x: -161, y: -26.399994}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 27276
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

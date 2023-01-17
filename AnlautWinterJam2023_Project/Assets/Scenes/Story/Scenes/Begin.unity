@@ -392,6 +392,7 @@ MonoBehaviour:
   _spriteContainer: {fileID: 1408569053}
   _currentArt: {fileID: 1948790455}
   _currentActor: {fileID: 1184553137}
+  _bar: {fileID: 1377039456}
 --- !u!114 &487745301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1377039453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -954,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updatedProgress: 0
   _progress: {fileID: 111306363}
-  _maxProgress: 50
+  _maxProgress: 100
 --- !u!1 &1408569051
 GameObject:
   m_ObjectHideFlags: 0

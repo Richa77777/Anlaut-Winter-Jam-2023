@@ -36,6 +36,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _currentActor;
 
+    [SerializeField]
+    private ProgressBar _bar;
+
     void Start()
     {
         LoadStory();
@@ -175,6 +178,11 @@ public class DialogueManager : MonoBehaviour
         _storyScript.BindExternalFunction("next", (string nextScene) =>
         {
             SceneManager.LoadScene(nextScene);
+        });
+
+        _storyScript.BindExternalFunction("updateBar", (float newValue) =>
+        {
+            _bar.UpdateBarValue(newValue);
         });
     }
 }
