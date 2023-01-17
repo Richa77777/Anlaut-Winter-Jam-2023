@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 {name("Цуми")}
@@ -42,4 +43,5 @@ EXTERNAL name(actorName)
 === continue ===
  
 * [“Цуми, ты нужна мне.”]
+{next("Level5")}
 -> END

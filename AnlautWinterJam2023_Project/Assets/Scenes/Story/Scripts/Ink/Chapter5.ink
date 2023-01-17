@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 Мы остановились с Цуми около какого-то моря.
@@ -84,6 +85,7 @@ EXTERNAL name(actorName)
 
  
 * [Цуми, ты нужна мне.]
+{next("Level6")}
 -->END
 -->END
 -->END

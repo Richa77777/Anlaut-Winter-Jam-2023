@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 Сегодня мне снилась Цуми.
@@ -48,4 +49,5 @@ EXTERNAL name(actorName)
 
  
 * [Цуми, ты нужна мне.]
+{next("Level3")}
 -> END

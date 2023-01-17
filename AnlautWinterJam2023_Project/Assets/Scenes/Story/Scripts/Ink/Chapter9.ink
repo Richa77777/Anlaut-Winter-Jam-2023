@@ -1,9 +1,9 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
- 
 * [Идти налево]
 -> continue
 
@@ -11,6 +11,7 @@ EXTERNAL name(actorName)
 -> continue
 
 === continue ===
+...
  
 * [Идти налево]
 -> continue2
@@ -19,6 +20,7 @@ EXTERNAL name(actorName)
 -> continue2
 
 === continue2 ===
+...
  
 * [Идти налево]
 -> continue3
@@ -27,6 +29,7 @@ EXTERNAL name(actorName)
 -> continue3
 
 === continue3 ===
+...
  
 * [Идти налево]
 -> continue4
@@ -35,6 +38,7 @@ EXTERNAL name(actorName)
 -> continue4
 
 === continue4 ===
+...
  
 * [Идти налево]
 -> continue5
@@ -47,6 +51,7 @@ EXTERNAL name(actorName)
 Я спрятался.
 Цуми, пожалуйста, не надо искать меня.
 Мне страшно. Очень страшно.
+{next("Level10")}
 
 -> END
 
