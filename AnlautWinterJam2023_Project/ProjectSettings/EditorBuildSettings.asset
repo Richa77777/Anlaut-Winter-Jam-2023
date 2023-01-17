@@ -9,6 +9,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Story/Scenes/Begin.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter1.unity
+    guid: 3d97ddac3a62afe4b9fd4d0dfcf4352f
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter2.unity
+    guid: e717c6be28b9b344c971c615a04fd9b6
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter3.unity
+    guid: 6e081ef226e50d047aebf8ba646f429c
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter4.unity
+    guid: c8ee21f7031fa2e44afa7183705fbf2e
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter5.unity
+    guid: ca69996955ecd4b4596492223fec7c74
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter6.unity
+    guid: 7328fe0dee702e846a11ba96353066f6
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter7.unity
+    guid: 1b1072cd941822a44b22cc7406b0e2f4
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter8.unity
+    guid: fdf30ef8ba700a942b2338fe58d6d717
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter9.unity
+    guid: 4a2728bc128ba7f4e844015ba7b8b2d3
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/Chapter10.unity
+    guid: f6db78cdcb33c924187c81e126080a3c
+  - enabled: 1
+    path: Assets/Scenes/Story/Scenes/End.unity
+    guid: 06bab514f2738b342bfda2f548e4f5e4
+  - enabled: 1
     path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level1.unity
     guid: 3838322ce76754a46a598fd92c7c7b72
   m_configObjects: {}
