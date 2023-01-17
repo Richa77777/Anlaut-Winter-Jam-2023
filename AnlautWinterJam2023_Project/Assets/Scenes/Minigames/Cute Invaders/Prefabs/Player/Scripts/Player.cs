@@ -8,11 +8,11 @@ namespace CuteInvaders
 
     public class Player : MonoBehaviour
     {
-        private Rigidbody2D _rigidBody;
+        private Rigidbody2D _rigidbody;
 
         private void Awake()
         {
-            _rigidBody = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
 
         private void Start()
@@ -48,13 +48,15 @@ namespace CuteInvaders
             {
                 Shoot();
             }
+
+            Timer();
         }
 
         #region Move
 
         private Vector3 refVel = Vector3.zero;
 
-        [Header("MoveVariables")]
+        [Header("Move Variables")]
         [SerializeField] private float smoothValue = .2f;
         [Range(0f, 5f)]
         [SerializeField] private float _moveSpeed = 0f;
@@ -63,13 +65,13 @@ namespace CuteInvaders
         {
             float horizontalAxis = Input.GetAxis("Horizontal");
 
-            _rigidBody.velocity = Vector3.SmoothDamp(_rigidBody.velocity, new Vector3(horizontalAxis * _moveSpeed, 0f, 0f), ref refVel, smoothValue);
+            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, new Vector3(horizontalAxis * _moveSpeed, 0f, 0f), ref refVel, smoothValue);
         }
 
         private void StopMove()
         {
 
-            _rigidBody.velocity = Vector3.SmoothDamp(_rigidBody.velocity, Vector3.zero, ref refVel, smoothValue);
+            _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, Vector3.zero, ref refVel, smoothValue);
         }
 
         #endregion
@@ -78,27 +80,39 @@ namespace CuteInvaders
         
         [Space(10f)]
 
-        [Header("ShootVariables")]
+        [Header("Shoot Variables")]
         [Range(0, 10)] [SerializeField] private int _bulletsPoolSize;
         [SerializeField] private GameObject _bulletPrefab;
         [SerializeField] private Transform _bulletsParent; // Место, куда будут складываться пули.
         [SerializeField] private GameObject _bulletSpawnpoint;
 
+        [Range(0.0f, 10f)] [SerializeField] private float _cooldownTime = 0f;
+        private float _currentCooldownTime = 0f;
+
         private List<GameObject> _bulletsPool = new List<GameObject>();
 
         private void Shoot()
         {
-            for (int i = 0; i < _bulletsPoolSize; i++)
+            if (_currentCooldownTime == 0)
             {
-                if (_bulletsPool[i].activeInHierarchy == false)
+                for (int i = 0; i < _bulletsPoolSize; i++)
                 {
-                    _bulletsPool[i].transform.position = _bulletSpawnpoint.transform.position;
-                    _bulletsPool[i].SetActive(true);
-                    break;
+                    if (_bulletsPool[i].activeInHierarchy == false)
+                    {
+                        _bulletsPool[i].transform.position = _bulletSpawnpoint.transform.position;
+                        _bulletsPool[i].SetActive(true);
+                        break;
+                    }
                 }
+
+                _currentCooldownTime = _cooldownTime;
             }
         }
 
+        private void Timer()
+        {
+            _currentCooldownTime = Mathf.Clamp(_currentCooldownTime - Time.deltaTime, 0f, _cooldownTime);
+        }
         #endregion
     }
 }
