@@ -2,7 +2,9 @@ EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
+EXTERNAL updateBar(barValue)
 
+{updateBar(0.75)}
 {image(0)}
 {name("Цуми")}
 “Ого, вот это костюм! Спасибо, друг!”

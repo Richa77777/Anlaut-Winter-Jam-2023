@@ -2,7 +2,9 @@ EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
+EXTERNAL updateBar(barValue)
 
+{updateBar(0.97)}
 {image(0)}
 Теперь ты никуда не уйдёшь.
 Сиди в комнате.
@@ -29,6 +31,7 @@ EXTERNAL next(nextScene)
 
 Палец соскользнул на левую кнопку, и я случайно ударил Цуми.
 
+{updateBar(0.8)}
 {image(4)}
 {name("Цуми")}
 “Ай! Больно!”
@@ -43,12 +46,17 @@ EXTERNAL next(nextScene)
 Только сначала получи за то, сколько внимания, чёрт побери, я тебе уделил.
 А ты не обращала внимания.
 Бестолковая.
+{updateBar(0.6)}
 {image(5)}
 Глупая.
 
+{updateBar(0.35)}
 Тупая.
 
+{updateBar(0.2)}
 Безделушка.
+
+{updateBar(0.1)}
 {image(6)}
 Цуми резко подняла глаза и уставилась на меня.
 Я перестал кликать на кнопку мыши.

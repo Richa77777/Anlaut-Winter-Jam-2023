@@ -13,11 +13,24 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     private float _maxProgress;
 
-    public float UpdatedProgress { get => _updatedProgress; set => _updatedProgress = value; }
-    public Image Progress { get => _progress; set => _progress = value; }
-
-    void Update()
+    private void Start()
     {
-        _progress.fillAmount = _updatedProgress / _maxProgress;
+        _progress.fillAmount = _updatedProgress/_maxProgress;
     }
+
+    public void UpdateBarValue(float newValue)
+    {
+        StartCoroutine(SetValueBar(newValue));
+    }
+
+    IEnumerator SetValueBar(float newValue)
+    {
+        while (_progress.fillAmount != newValue)
+        {
+            _progress.fillAmount = Mathf.MoveTowards(_progress.fillAmount, newValue, 1f * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+
 }
