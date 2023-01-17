@@ -2,7 +2,9 @@ EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
+EXTERNAL updateBar(barValue)
 
+{updateBar(0.9)}
 {image(0)}
 Мы остановились с Цуми около какого-то моря.
 Мне очень нравится её пляжный костюм.

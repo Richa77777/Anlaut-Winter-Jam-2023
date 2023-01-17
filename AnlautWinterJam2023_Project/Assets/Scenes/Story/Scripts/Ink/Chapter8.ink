@@ -2,8 +2,9 @@ EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
+EXTERNAL updateBar(barValue)
 
-
+{updateBar(0.999)}
 {image(0)}
 {name("Цуми")}
 Просыпайся, дурашка!
@@ -60,6 +61,7 @@ EXTERNAL next(nextScene)
 {name("Цуми")}
 Поэтому я заберу часть нашей дружбы, чтобы исцелиться.
 
+{updateBar(0.8)}
 {image(10)}
 Нет!
 
@@ -69,6 +71,7 @@ EXTERNAL next(nextScene)
 {name("Цуми")}
 Ещё часть я заберу, чтобы погасить твои долги перед мамой.
 
+{updateBar(0.5)}
 {image(12)}
 Откуда ты знаешь?!
 
@@ -76,6 +79,7 @@ EXTERNAL next(nextScene)
 {name("Цуми")}
 Ещё часть – чтобы, наконец, прибраться у себя в комнате и принять душ.
 
+{updateBar(0.1)}
 {image(14)}
 Что ты делаешь, Цуми? Прекрати!!!
 

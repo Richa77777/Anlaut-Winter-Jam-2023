@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62493933cc12f654882c1c20b6740be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonFile: {fileID: 4900000, guid: 7e9368c38db8eac4cb6784adf4747f6f, type: 3}
+  _inkJsonFile: {fileID: 4900000, guid: 59558e5b1a6fd9849849f791195cd9fd, type: 3}
   _dialogueField: {fileID: 114406598}
   _typingSpeed: 0.02
   _choiceHolder: {fileID: 1661123357}
@@ -392,6 +392,7 @@ MonoBehaviour:
   _spriteContainer: {fileID: 1408569053}
   _currentArt: {fileID: 1948790455}
   _currentActor: {fileID: 997071109}
+  _bar: {fileID: 1377039456}
 --- !u!114 &487745301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updatedProgress: 0
   _progress: {fileID: 111306363}
-  _maxProgress: 50
+  _maxProgress: 100
 --- !u!1 &1408569051
 GameObject:
   m_ObjectHideFlags: 0
