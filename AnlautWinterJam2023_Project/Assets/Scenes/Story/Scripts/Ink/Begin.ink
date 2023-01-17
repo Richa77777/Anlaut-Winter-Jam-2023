@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 “Познакомьтесь с Цуми – обаятельной и ласковой очаровашкой, которая скрасит любой ваш даже самый мрачный день!
@@ -36,4 +37,6 @@ EXTERNAL name(actorName)
 Странно, она совсем непохожа на других из моей коллекции...
 Какая-то особенная...
 Она нужна мне.
+
+{next("Level1")}
 -> END

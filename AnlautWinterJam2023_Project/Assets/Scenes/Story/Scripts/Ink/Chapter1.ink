@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 Наконец-то я смогу выбить тебя, малышка.
@@ -41,3 +42,4 @@ EXTERNAL name(actorName)
 
  
 * [Цуми, ты нужна мне.]
+{next("Level2")}

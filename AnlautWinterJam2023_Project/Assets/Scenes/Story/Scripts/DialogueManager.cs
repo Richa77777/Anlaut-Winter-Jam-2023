@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Ink.Runtime;
@@ -59,6 +60,14 @@ public class DialogueManager : MonoBehaviour
             _currentActor.text = "";
             _currentLine = _storyScript.Continue();
             _displayLineCoroutine = StartCoroutine(DisplayLine(_currentLine));
+        }
+        else//end
+        {
+            GameObject background = GameObject.Find("BackgroundDText");
+            if(background != null)
+            {
+                background.SetActive(false);
+            }
         }
 
         if(_storyScript.currentChoices.Count > 0)
@@ -161,6 +170,11 @@ public class DialogueManager : MonoBehaviour
         _storyScript.BindExternalFunction("name", (string nameActor) =>
         {
             _currentActor.text = nameActor;
+        });
+
+        _storyScript.BindExternalFunction("next", (string nextScene) =>
+        {
+            SceneManager.LoadScene(nextScene);
         });
     }
 }

@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 Я люблю тебя. Пожалуйста, прости за всё.
@@ -33,3 +34,4 @@ EXTERNAL name(actorName)
 На мгновение я увидел металлический блеск её орудия.
 Вот-вот она меня убьёт...
 ...
+{next("End")}

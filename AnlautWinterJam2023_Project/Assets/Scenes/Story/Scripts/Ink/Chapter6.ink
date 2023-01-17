@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL next(nextScene)
 
 {image(0)}
 Каждый раз, проводя время не с Цуми, я таким образом её наказываю.
@@ -87,3 +88,4 @@ EXTERNAL name(actorName)
 
  
 * [Цуми, ты нужна мне.]
+{next("Level7")}
