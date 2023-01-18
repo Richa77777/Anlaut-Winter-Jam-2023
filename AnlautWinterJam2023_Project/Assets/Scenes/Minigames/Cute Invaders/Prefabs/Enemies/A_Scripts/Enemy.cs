@@ -8,23 +8,18 @@ namespace CuteInvaders.Enemies
     public abstract class Enemy : MonoBehaviour
     {
 
-        private Rigidbody2D _rigidbody;
+        protected Rigidbody2D _rigidbody;
+        protected EnemyController _enemyController;
+        protected EnemyPools _enemyPools;
+        private Schala _schala;
 
-        private void Start()
+        private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            //_currentHp = _startHp;
-
-            //GameObject bullet;
-
-            //for (int i = 0; i < _bulletsPoolSize; i++)
-            //{
-            //    bullet = Instantiate(_bulletPrefab, _bulletsParent);
-
-            //    _bulletsPool.Add(bullet);
-
-            //    bullet.SetActive(false);
-            //}
+            _enemyController = FindObjectOfType<EnemyController>();
+            _enemyPools = FindObjectOfType<EnemyPools>();
+            _currentHp = _startHp;
+            _schala = FindObjectOfType<Schala>();
         }
 
         private void FixedUpdate()
@@ -38,63 +33,56 @@ namespace CuteInvaders.Enemies
             {
                 collision.gameObject.SetActive(false);
                 gameObject.SetActive(false);
+                _schala.AddSchala();
             }
         }
 
         #region Move
 
-        [SerializeField] private float _moveSpeed = 0f;
+        [SerializeField] protected float _moveSpeed = 0.1f;
 
-        private void Move()
+        protected virtual void Move()
         {
             _rigidbody.velocity = Vector2.down * _moveSpeed;
         }
         #endregion
 
-        //#region Shoot
+        #region Shoot
 
-        //[Header("Shoot Variables")]
-        //[Range(0, 10)] [SerializeField] private int _bulletsPoolSize;
-        //[SerializeField] private GameObject _bulletPrefab;
-        //[SerializeField] private Transform _bulletsParent; // Место, куда будут складываться пули.
-        //[SerializeField] private GameObject _bulletSpawnpoint;
+        [Header("Shoot Variables")]
+        [SerializeField] protected float _shootCooldown;
+        [SerializeField] protected Transform _bulletsSpawnpoint;
 
-        //private List<GameObject> _bulletsPool = new List<GameObject>();
+        public Transform BulletSpawnpoints { get => _bulletsSpawnpoint; }
 
-        //public void Shoot()
-        //{
+        public abstract IEnumerator Shoot();
+        #endregion
 
-        //}
-        //#endregion
+        #region Dependency
 
-        //#region Dependency
+        [Space(10f)]
+        [Header("Dependency Variables")]
+        [SerializeField] protected float _groupDependency = 0f; // Влияние/Зависимость на/от группу(ы).
 
-        //[Space(10f)]
-        //[Header("Dependency Variables")]
-        //[SerializeField] protected float _groupDependency = 0f; // Влияние/Зависимость на/от группу(ы).
+        protected abstract float GeneralGroupDependency();
 
-        //protected virtual void GroupDependency()
-        //{
+        #endregion
 
-        //}
+        #region HP
 
-        //#endregion
+        [Space(10f)]
+        [Header("HP Variables")]
+        [SerializeField] protected const int _startHp = 0;
 
-        //#region HP
+        protected int _currentHp;
 
-        //[Space(10f)]
-        //[Header("HP Variables")]
-        //[SerializeField] protected const int _startHp = 0;
+        public int CurrentHp { get { return _currentHp; } }
 
-        //protected int _currentHp;
+        public void AddHp(int value)
+        {
+            _currentHp = Mathf.Clamp(_currentHp += value, 0, _startHp);
+        }
 
-        //public int CurrentHp { get { return _currentHp; } }
-
-        //public void AddHp(int value)
-        //{
-        //    _currentHp = Mathf.Clamp(_currentHp += value, 0, _startHp);
-        //}
-
-        //#endregion
+        #endregion
     }
 }

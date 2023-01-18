@@ -28,5 +28,21 @@ namespace CuteInvaders
 
             SceneManager.LoadScene("Chapter" + index);
         }
+
+
+        public void ChangeStoryScenesh()
+        {
+            StartCoroutine(ChangeStorySceneIs());
+        }
+
+        private IEnumerator ChangeStorySceneIs()
+        {
+            _fade.gameObject.SetActive(true);
+            _fade.Dark();
+
+            yield return new WaitForSeconds(1.5f);
+
+            SceneManager.LoadScene("End");
+        }
     }
 }
