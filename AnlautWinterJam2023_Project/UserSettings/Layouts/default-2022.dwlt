@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18386
+  controlID: 19641
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18305
+  controlID: 19550
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18306
+  controlID: 19551
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,7 +343,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -407,9 +407,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 869affff129bffffd49bffffe4a1ffff70a2ffff6aa3ffffaea9ffff38aaffff32abffff22b1ffffaeb1ffffaab2fffff2b8ffff82b9ffff4abaffffcabfffff54c0ffff50c1ffff6adcfffff6dcfffff2ddffff18fbffffaa660000b46600006c730000a2730000ee7300007a7f00008480000020810000408400006c850000a2850000f6850000b2890000d68a0000148b0000608b0000ea90000040910000749100008c960000e2960000169700008a9c0000f49c0000149d0000
+      m_SelectedIDs: 0ebb0000
+      m_LastClickedID: 47886
+      m_ExpandedIDs: 3674ffff2477ffff187affff027dffffee7dffffec80ffff3e84ffff2887ffff108affff0c8dffffea99ffff369affff129cffff86a5ffffe2a5ffffbaa7ffff46abffffccaeffffb4b2ffff94b6ffff2cbaffff38c5ffff3ac6ffff28caffff08ceffffc0d1ffffe4d8ffff3adfffff40e9ffffe4e9ffffb4eaffff4aebffff1eecffffe0f1ffff50f2ffffc0f2ffffe6f4ffff1af7ffff7efaffff3e6d000020710000b6710000f6710000cc7200000c730000e6780000a87d000056800000a6820000f4820000a2850000ac850000e8850000508b0000ce8d00003891000028940000f2960000b2990000fa9b00001a9c0000caa20000caa90000b8ab0000c4ad00007eaf0000b6b1000092b30000ccb40000fab6000004b9000022bb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1452,23 +1452,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Story
+    - Assets/Scenes/Story/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Story
+  - Assets/Scenes/Story/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projects\unity\Anlaut-Winter-Jam-2023\AnlautWinterJam2023_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 120.68259}
-    m_SelectedIDs: 92670000
-    m_LastClickedID: 26514
-    m_ExpandedIDs: 000000008e670000906700009267000094670000966700009867000000ca9a3bffffff7f
+    m_SelectedIDs: 16680000
+    m_LastClickedID: 26646
+    m_ExpandedIDs: 00000000ec670000ee670000f0670000f2670000f4670000f667000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1496,7 +1496,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e670000906700009267000094670000966700009867000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000ec670000ee670000f0670000f2670000f4670000f667000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
