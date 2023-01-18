@@ -15,12 +15,16 @@ public class ProgressBar : MonoBehaviour
 
     private void Start()
     {
+        _updatedProgress = PlayerPrefs.GetFloat("currentProgress");
         _progress.fillAmount = _updatedProgress/_maxProgress;
     }
 
     public void UpdateBarValue(float newValue)
     {
         StartCoroutine(SetValueBar(newValue));
+
+        _updatedProgress = _progress.fillAmount * _maxProgress;
+        PlayerPrefs.SetFloat("currentProgress", _updatedProgress);
     }
 
     IEnumerator SetValueBar(float newValue)

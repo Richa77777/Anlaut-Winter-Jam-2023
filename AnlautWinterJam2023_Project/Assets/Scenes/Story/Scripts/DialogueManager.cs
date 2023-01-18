@@ -185,4 +185,9 @@ public class DialogueManager : MonoBehaviour
             _bar.UpdateBarValue(newValue);
         });
     }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
