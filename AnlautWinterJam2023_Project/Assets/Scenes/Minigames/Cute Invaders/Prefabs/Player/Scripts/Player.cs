@@ -9,10 +9,20 @@ namespace CuteInvaders
     public class Player : MonoBehaviour
     {
         private Rigidbody2D _rigidbody;
+        private AudioSource _audioSource;
+        private CameraShake _cameraShake;
+        private HeartsSystem _heartsSystem;
+
+        [SerializeField] private AudioClip _shootSound;
+
+        private int _currentHp = 3;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _audioSource = GetComponent<AudioSource>();
+            _cameraShake = Camera.main.GetComponent<CameraShake>();
+            _heartsSystem = GetComponent<HeartsSystem>();
         }
 
         private void Start()
@@ -22,7 +32,7 @@ namespace CuteInvaders
             for (int i = 0; i < _bulletsPoolSize; i++)
             {
                 bullet = Instantiate(_bulletPrefab, _bulletsParent);
-                
+
                 _bulletsPool.Add(bullet);
 
                 bullet.SetActive(false);
@@ -52,6 +62,19 @@ namespace CuteInvaders
             Timer();
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("EnemyBullet"))
+            {
+                _currentHp--;
+
+                collision.gameObject.SetActive(false);
+                _cameraShake.Shake(0.25f, 0.4f);
+
+                _heartsSystem.CheckHearts(_currentHp);
+            }
+        }
+
         #region Move
 
         private Vector3 refVel = Vector3.zero;
@@ -77,7 +100,7 @@ namespace CuteInvaders
         #endregion
 
         #region Shoot
-        
+
         [Space(10f)]
 
         [Header("Shoot Variables")]
@@ -101,6 +124,9 @@ namespace CuteInvaders
                     {
                         _bulletsPool[i].transform.position = _bulletSpawnpoint.transform.position;
                         _bulletsPool[i].SetActive(true);
+                        _audioSource.pitch = Random.Range(0.95f, 1.05f);
+                        _audioSource.clip = _shootSound;
+                        _audioSource.Play();
                         break;
                     }
                 }

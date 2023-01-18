@@ -44,4 +44,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level1.unity
     guid: 3838322ce76754a46a598fd92c7c7b72
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level2.unity
+    guid: 730aec6d404d4a94082375e0d5789018
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level3.unity
+    guid: ff0345e3752f6f04497529602c0b047d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level4.unity
+    guid: f3c8dcfc35d34ed4fabeea033c301c7d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level5.unity
+    guid: 7aaea29c51cfbd54a81b07303b827075
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level6.unity
+    guid: b22700752d5129d4b963e93e93135425
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level7.unity
+    guid: ca1b80dd724aa944fb5be50a1c72995b
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level8.unity
+    guid: b0fc22d8f2ee1af4084b2e7ad6cd1815
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level9.unity
+    guid: 72c19ec279eaa7e4193859bdddf4f66d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cute Invaders/Levels/Level10.unity
+    guid: 81f6b353776ad4343875e5e0bfc739ad
   m_configObjects: {}
