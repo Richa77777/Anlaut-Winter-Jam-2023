@@ -6,7 +6,7 @@ using CuteInvaders;
 
 public class LoadMinigame : MonoBehaviour
 {
-    [SerializeField] private Fade _fade;
+    [SerializeField] private Fade1 _fade;
 
     private void Start()
     {
