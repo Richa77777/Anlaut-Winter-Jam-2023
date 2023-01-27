@@ -32,6 +32,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private SpriteContainer _spriteContainer;
     [SerializeField]
+    private AudioClipContainer _audioContainer;
+
+    [SerializeField]
     private Image _currentArt;
     [SerializeField]
     private TextMeshProUGUI _currentActor;
@@ -157,9 +160,15 @@ public class DialogueManager : MonoBehaviour
             _currentArt.sprite = _spriteContainer.GetImageByID(idImage);
         });
 
-        _storyScript.BindExternalFunction("sound", (int idSound) =>
+        _storyScript.BindExternalFunction("soundOn", (string soundName) =>
         {
+            AudioManager.Instance.Clip = _audioContainer.GetAudioByName(soundName);
+            AudioManager.Instance.StartMusic();
+        });
 
+        _storyScript.BindExternalFunction("soundOff", () =>
+        {
+            AudioManager.Instance.StopMusic();
         });
 
         _storyScript.BindExternalFunction("name", (string nameActor) =>

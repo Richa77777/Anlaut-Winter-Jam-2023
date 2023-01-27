@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
+{soundOn("scary")}
 {image(0)}
 * [Идти налево]
 -> continue
@@ -51,6 +53,7 @@ EXTERNAL next(nextScene)
 Я спрятался.
 Цуми, пожалуйста, не надо искать меня.
 Мне страшно. Очень страшно.
+{soundOff()}
 {next("Level10")}
 
 -> END

@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL closeBackground()
 
+{soundOn("chill")}
 {image(0)}
 Я открыл глаза.
 Солнечный свет с непривычки ослепил мои глаза.
