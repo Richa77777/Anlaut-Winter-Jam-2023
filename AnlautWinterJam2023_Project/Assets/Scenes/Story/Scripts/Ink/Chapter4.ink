@@ -1,9 +1,11 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 EXTERNAL updateBar(barValue)
 
+{soundOn("happy")}
 {updateBar(0.75)}
 {image(0)}
 {name("Цуми")}
@@ -13,6 +15,7 @@ EXTERNAL updateBar(barValue)
 Это стоило мне тысячи иен, а я для тебя всё ещё “друг”.
 Неблагодарная.
 
+{soundOff()}
 {image(1)}
 {name("Цуми")}
 “Что ты сказал?”

@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
+{soundOn("playful")}
 {image(0)}
 “Познакомьтесь с Цуми – обаятельной и ласковой очаровашкой, которая скрасит любой ваш даже самый мрачный день!
 Она умеет играть на фортепиано, пишет стихи и даже сама сочиняет песни, а ещё очень любит заводить новых друзей!
@@ -11,6 +13,7 @@ EXTERNAL next(nextScene)
 Эксклюзив Цуми доступна для покупки в нашей игре в течение недели!
 Стань другом для этой милашки! Цуми ждёт тебя!”
 
+{soundOff()}
 {image(1)}
 Доброе утро, я.
 Опять болит голова от того, что уснул поздно.

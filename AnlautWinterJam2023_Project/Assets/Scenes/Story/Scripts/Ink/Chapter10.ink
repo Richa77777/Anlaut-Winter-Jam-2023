@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
+{soundOn("scary")}
 {image(0)}
 Я люблю тебя. Пожалуйста, прости за всё.
 Я надеюсь, мы сможем всё исправить.
@@ -29,6 +31,7 @@ EXTERNAL next(nextScene)
 {name("Цуми")}
 “Может, теперь ты почувствуешь ту боль, что я испытала.”
 
+{soundOff()}
 {image(2)}
 Цуми замахнулась мечом.
 На мгновение я увидел металлический блеск её орудия.

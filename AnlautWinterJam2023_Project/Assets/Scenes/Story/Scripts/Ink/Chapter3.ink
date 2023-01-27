@@ -1,9 +1,11 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 EXTERNAL updateBar(barValue)
 
+{soundOn("happy")}
 {updateBar(0.3)}
 {image(0)}
 {name("Цуми")}
@@ -16,6 +18,7 @@ EXTERNAL updateBar(barValue)
 {name("Ты")}
 “Бесстыдница.”
 Но сейчас мы с тобой закончим квест и снова будем вместе.
+{soundOff()}
 Приодену тебя в новое платьишко, надену красивый ободок.
 Только бы ты была счастливой.
 Пожалуйста, потерпи, мне нужно заработать ещё монет…
