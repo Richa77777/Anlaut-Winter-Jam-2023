@@ -1,6 +1,7 @@
 EXTERNAL image(idImage)
 EXTERNAL sound(idSound)
 EXTERNAL name(actorName)
+EXTERNAL closeBackground()
 
 {image(0)}
 Я открыл глаза.
@@ -50,3 +51,4 @@ EXTERNAL name(actorName)
 ...
 Боже, до чего же красивое небо.
 И почему я так долго не открывал шторы?
+{closeBackground()}

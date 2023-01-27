@@ -64,14 +64,6 @@ public class DialogueManager : MonoBehaviour
             _currentLine = _storyScript.Continue();
             _displayLineCoroutine = StartCoroutine(DisplayLine(_currentLine));
         }
-        else//end
-        {
-            GameObject background = GameObject.Find("BackgroundDText");
-            if(background != null)
-            {
-                background.SetActive(false);
-            }
-        }
 
         if(_storyScript.currentChoices.Count > 0)
         {
@@ -177,17 +169,29 @@ public class DialogueManager : MonoBehaviour
 
         _storyScript.BindExternalFunction("next", (string nextScene) =>
         {
-            SceneManager.LoadScene(nextScene);
+            LoadSceneByName.Instance.ChangeMinigame(nextScene);
         });
 
         _storyScript.BindExternalFunction("updateBar", (float newValue) =>
         {
             _bar.UpdateBarValue(newValue);
         });
+
+        _storyScript.BindExternalFunction("closeBackground",() =>
+        {
+            GameObject background = GameObject.Find("BackgroundDText");
+            if (background != null)
+            {
+                background.SetActive(false);
+            }
+        });
     }
 
     void OnApplicationQuit()
     {
+        //PlayerPrefs.DeleteKey("currentProgress");
+        //PlayerPrefs.SetFloat("currentProgress", 0f);
         PlayerPrefs.DeleteAll();
+
     }
 }
