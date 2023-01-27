@@ -24,25 +24,10 @@ namespace CuteInvaders
             _fade.gameObject.SetActive(true);
             _fade.Dark();
             
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSecondsRealtime(1.5f);
 
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Chapter" + index);
-        }
-
-
-        public void ChangeStoryScenesh()
-        {
-            StartCoroutine(ChangeStorySceneIs());
-        }
-
-        private IEnumerator ChangeStorySceneIs()
-        {
-            _fade.gameObject.SetActive(true);
-            _fade.Dark();
-
-            yield return new WaitForSeconds(1.5f);
-
-            SceneManager.LoadScene("End");
         }
     }
 }

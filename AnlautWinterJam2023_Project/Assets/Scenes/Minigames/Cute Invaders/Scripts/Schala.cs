@@ -7,8 +7,8 @@ using CuteInvaders.Enemies;
 public class Schala : MonoBehaviour
 {
     [SerializeField] private Image _schala;
-    public float _percentForOne;
-    [SerializeField] public float _biggerPercentSchala;
+    private float _percentForOne;
+    [SerializeField] private float _biggerPercentSchala;
 
     private LoseWin _loseWin;
 
@@ -18,18 +18,17 @@ public class Schala : MonoBehaviour
     {
         _enemyController = FindObjectOfType<EnemyController>();
         _loseWin = FindObjectOfType<LoseWin>();
+
+        _percentForOne = _enemyController.EnemiesGet.Count / _biggerPercentSchala;
     }
 
     public void AddSchala()
     {
-        _schala.fillAmount += 0.06666666666f;
+        _schala.fillAmount += _percentForOne;
 
         if (_schala.fillAmount == 1)
         {
             _loseWin.Win();
         }
     }
-
-
-
 }
