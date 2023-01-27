@@ -17,7 +17,7 @@ namespace CuteInvaders
 
             float elapsed = 0.0f;
 
-            while (elapsed < duration)
+            while (elapsed < duration && Time.timeScale > 0)
             {
                 float x = Random.Range(-1f, 1f) * magnitude;
                 float y = Random.Range(-1f, 1f) * magnitude;

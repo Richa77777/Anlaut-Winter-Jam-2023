@@ -9,7 +9,7 @@ namespace CuteInvaders
     {
         private Animator _animator;
 
-        private void Start()
+        private void Awake()
         {
             _animator = GetComponent<Animator>();
         }

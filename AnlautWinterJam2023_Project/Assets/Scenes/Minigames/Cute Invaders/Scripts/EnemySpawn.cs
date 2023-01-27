@@ -13,13 +13,10 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private List<GameObject> _lineTwo = new List<GameObject>();
     [SerializeField] private List<GameObject> _lineThree = new List<GameObject>();
 
-    [SerializeField] private Schala _schala;
-
     private EnemyController _enemyController;
 
-    private void Start()
+    private void Awake()
     {
-        _schala = FindObjectOfType<Schala>();
         _enemyController = FindObjectOfType<EnemyController>();
 
         for (int i = 0; i < _lineOne.Count; i++)
@@ -27,6 +24,8 @@ public class EnemySpawn : MonoBehaviour
             GameObject pref = Instantiate(_lineOne[i]);
 
             pref.transform.position = _spawnpoints1[i].transform.position;
+
+            _enemyController.EnemiesGet.Add(pref.GetComponent<Enemy>());
         }
 
         for (int i = 0; i < _lineTwo.Count; i++)
@@ -34,6 +33,8 @@ public class EnemySpawn : MonoBehaviour
             GameObject pref = Instantiate(_lineTwo[i]);
 
             pref.transform.position = _spawnpoints2[i].transform.position;
+
+            _enemyController.EnemiesGet.Add(pref.GetComponent<Enemy>());
         }
 
         for (int i = 0; i < _lineThree.Count; i++)
@@ -41,6 +42,8 @@ public class EnemySpawn : MonoBehaviour
             GameObject pref = Instantiate(_lineThree[i]);
 
             pref.transform.position = _spawnpoints3[i].transform.position;
+
+            _enemyController.EnemiesGet.Add(pref.GetComponent<Enemy>());
         }
 
     }

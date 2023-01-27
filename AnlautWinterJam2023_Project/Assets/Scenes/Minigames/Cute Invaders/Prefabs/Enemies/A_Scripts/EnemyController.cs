@@ -9,7 +9,7 @@ namespace CuteInvaders.Enemies
     {
         [SerializeField] private List<Enemy> _enemies = new List<Enemy>();
 
-        public List<Enemy> EnemiesGet { get => _enemies; }
+        public List<Enemy> EnemiesGet { get => _enemies; set => _enemies = value; }
 
         private void Update()
         {
