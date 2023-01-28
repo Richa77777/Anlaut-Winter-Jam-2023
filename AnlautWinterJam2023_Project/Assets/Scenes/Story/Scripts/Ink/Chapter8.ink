@@ -1,9 +1,11 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 EXTERNAL updateBar(barValue)
 
+{soundOn("pleasant")}
 {updateBar(0.999)}
 {image(0)}
 {name("Цуми")}
@@ -34,6 +36,7 @@ EXTERNAL updateBar(barValue)
 {name("Ты")}
 Ничего, это моя вина...
 
+{soundOff()}
 {image(4)}
 {name("Цуми")}
 Я была не права.
@@ -53,6 +56,7 @@ EXTERNAL updateBar(barValue)
 {name("Цуми")}
 Знаешь, я хочу… выйти за рамки нашего общения.
 
+{soundOn("mystical")}
 {image(8)}
 {name("Цуми")}
 Хоть моё сердце и цело, но шрамы на теле останутся надолго...
@@ -83,6 +87,7 @@ EXTERNAL updateBar(barValue)
 {image(14)}
 Что ты делаешь, Цуми? Прекрати!!!
 
+{soundOff()}
 {image(15)}
 {name("Цуми")}
 Я была нужна тебе, теперь ты нужен мне.

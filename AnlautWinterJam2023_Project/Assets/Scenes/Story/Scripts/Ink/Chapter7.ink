@@ -1,9 +1,11 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 EXTERNAL updateBar(barValue)
 
+{soundOn("happy")}
 {updateBar(0.97)}
 {image(0)}
 Теперь ты никуда не уйдёшь.
@@ -29,13 +31,15 @@ EXTERNAL updateBar(barValue)
 {name("Ты")}
 “ДА ЗАМОЛЧИ ТЫ!”
 
+{soundOff()}
+{image(4)}
 Палец соскользнул на левую кнопку, и я случайно ударил Цуми.
 
-{updateBar(0.8)}
-{image(4)}
 {name("Цуми")}
+{updateBar(0.8)}
 “Ай! Больно!”
 
+{soundOn("scary")}
 Цуми от боли немного сжалась, а на её лице отразилась какая-то странная печаль.
 Это не просто печаль, это беспомощность.
 От того, что ты – это лишь сплетение ноликов и единичек.
@@ -82,9 +86,11 @@ EXTERNAL updateBar(barValue)
 {name("Цуми")}
 “Ненавижу тебя! Проща-”
 
+{soundOff()}
 {image(10)}
 ...
 Экран резко потух
+{soundOn("mystical")}
 Чёрт возьми, что же я натворил.
 
 Она хотела признаться мне в симпатии, а я...
@@ -99,6 +105,7 @@ EXTERNAL updateBar(barValue)
 Вот блин...
 
 {image(11)}
+{soundOff()}
 Я встал со стула и попятился в потёмках к кровати.
 Наутро должно стать светлее, да ведь?
 Цуми, только бы мне всё это показалось...

@@ -1,5 +1,6 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
@@ -16,6 +17,7 @@ EXTERNAL next(nextScene)
 {image(1)}
 Неожиданно раздался стук в дверь.
 Я никого не жду в гости, уходите.
+{soundOn("mystical")}
 ...
 Или жду?
 Я поднялся со своего скрипучего стула и подошёл к двери.
@@ -78,6 +80,7 @@ EXTERNAL next(nextScene)
 {name("Ты")}
 “Она всегда так говорит. Пожелайте ей удачи.”
 
+{soundOff()}
 {image(6)}
 Сиюминутно я закрыл дверь.
 У меня есть другие планы.
