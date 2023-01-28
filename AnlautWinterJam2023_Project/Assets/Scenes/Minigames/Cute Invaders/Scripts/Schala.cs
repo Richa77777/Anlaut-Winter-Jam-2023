@@ -19,7 +19,13 @@ public class Schala : MonoBehaviour
         _enemyController = FindObjectOfType<EnemyController>();
         _loseWin = FindObjectOfType<LoseWin>();
 
-        _percentForOne = _enemyController.EnemiesGet.Count / _biggerPercentSchala;
+        Invoke(nameof(Percent), 0.35f);
+    }
+
+    private void Percent()
+    {
+        _percentForOne = 1.0f / _enemyController.EnemiesGet.Count;
+        print(_percentForOne);
     }
 
     public void AddSchala()
