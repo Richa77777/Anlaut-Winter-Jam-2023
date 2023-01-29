@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
+{soundOn("pleasant")}
 {image(0)}
 Наконец-то я смогу выбить тебя, малышка.
 Дрожащим пальцем я нажимаю на кнопку мыши.
@@ -14,7 +16,9 @@ EXTERNAL next(nextScene)
 
 {image(2)}
 Второй. Мусор.
+{soundOff()}
 
+{soundOn("tense")}
 {image(3)}
 Третий. Да что ж такое…
 В горле встал крепкий ком.
@@ -28,6 +32,7 @@ EXTERNAL next(nextScene)
 {image(4)}
 Четвертый. Мусор…
 
+{soundOff()}
 {image(5)}
 На экране резко что-то запестрило и засветилось.
 Неужели… Она…
@@ -35,6 +40,7 @@ EXTERNAL next(nextScene)
 {image(6)}
 {name("Цуми")}
 “Та-да! Цуми здесь! Пойдем в парк?”
+{soundOn("playful")}
 О да! Она у меня!
 Даже красивее, чем в промо…
 Конечно, милая, пошли в парк. Прямо сейчас.
@@ -42,4 +48,5 @@ EXTERNAL next(nextScene)
 
  
 * [Цуми, ты нужна мне.]
+{soundOff()}
 {next("Level2")}

@@ -1,8 +1,10 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 
+{soundOn("pleasant")}
 {image(0)}
 Сегодня мне снилась Цуми.
 Она была рядом, словно живая.
@@ -49,5 +51,6 @@ EXTERNAL next(nextScene)
 
  
 * [Цуми, ты нужна мне.]
+{soundOff()}
 {next("Level3")}
 -> END

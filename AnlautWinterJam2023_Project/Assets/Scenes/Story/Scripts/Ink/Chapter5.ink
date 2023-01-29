@@ -1,9 +1,11 @@
 EXTERNAL image(idImage)
-EXTERNAL sound(idSound)
+EXTERNAL soundOn(soundName)
+EXTERNAL soundOff()
 EXTERNAL name(actorName)
 EXTERNAL next(nextScene)
 EXTERNAL updateBar(barValue)
 
+{soundOn("happy")}
 {updateBar(0.9)}
 {image(0)}
 Мы остановились с Цуми около какого-то моря.
@@ -69,12 +71,14 @@ EXTERNAL updateBar(barValue)
 -> continue3
 
 === continue3 ===
+{soundOff()}
 {image(6)}
 Я не собираюсь терпеть эту получасовую кат-сцену с её подружками.
 Поэтому просто перезайду.
 В моих руках столько власти в этой игре!
 Я могу привлечь к себе любую тян, у меня достаточно ресурсов.
 Я на третьем месте в общем списке игроков этой чёртовой игры.
+{soundOn("scary")}
 Но ты, Цуми, видимо, не поняла, что я хочу тебя добиться.
 Мы с тобой всего в нескольких шагах к становлению парой.
 Будь у тебя в твоём компьютерном мозге больше извилин...
@@ -87,6 +91,7 @@ EXTERNAL updateBar(barValue)
 
  
 * [Цуми, ты нужна мне.]
+{soundOff()}
 {next("Level6")}
 -->END
 -->END

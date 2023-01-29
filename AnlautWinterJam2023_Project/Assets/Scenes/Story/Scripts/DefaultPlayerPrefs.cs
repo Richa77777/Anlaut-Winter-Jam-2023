@@ -6,6 +6,8 @@ public class DefaultPlayerPrefs : MonoBehaviour
 {
     void Start()
     {
+        //PlayerPrefs.DeleteKey("currentProgress");
+        //PlayerPrefs.SetFloat("currentProgress", 0f);
         PlayerPrefs.DeleteAll();
     }
 }
