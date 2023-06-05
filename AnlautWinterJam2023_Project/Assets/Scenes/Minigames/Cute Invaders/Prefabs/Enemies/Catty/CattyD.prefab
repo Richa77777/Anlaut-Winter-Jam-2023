@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &153501914486135211
+--- !u!1 &525887684357954654
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 153501914486135209}
-  - component: {fileID: 153501914486135188}
-  - component: {fileID: 153501914486135210}
-  - component: {fileID: 153501914486135208}
-  - component: {fileID: 153501914486135191}
+  - component: {fileID: 525887684357954652}
+  - component: {fileID: 8434346543439445695}
+  - component: {fileID: 525887684357954655}
+  - component: {fileID: 525887684357954653}
+  - component: {fileID: 525887684357954658}
   m_Layer: 0
-  m_Name: Panda
+  m_Name: CattyD
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &153501914486135209
+--- !u!4 &525887684357954652
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153501914486135211}
+  m_GameObject: {fileID: 525887684357954654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6541855, y: 2.5366678, z: 0}
+  m_LocalPosition: {x: 2.6541855, y: 2.5366678, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7472633697037549430}
+  - {fileID: 7122774850248653443}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153501914486135188
+--- !u!114 &8434346543439445695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153501914486135211}
+  m_GameObject: {fileID: 525887684357954654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f2db99ae675cc94d811e8a78431cb78, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7b0af0a61d6d84ba3f2d8ce93f7798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 0.1
-  _shootCooldown: 5
-  _bulletsSpawnpoint: {fileID: 7472633697037549430}
-  _groupDependency: 0.3
---- !u!212 &153501914486135210
+  _shootCooldown: 4
+  _bulletsSpawnpoint: {fileID: 7122774850248653443}
+  _groupDependency: 0.1
+--- !u!212 &525887684357954655
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153501914486135211}
+  m_GameObject: {fileID: 525887684357954654}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1db019edc3b298a468ec916370957da8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44450c944a9ef4a4681fa09b6000bc5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,13 +104,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &153501914486135208
+--- !u!60 &525887684357954653
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153501914486135211}
+  m_GameObject: {fileID: 525887684357954654}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -183,14 +183,14 @@ PolygonCollider2D:
       - {x: 0.43879247, y: -0.22531438}
       - {x: 0.4402287, y: 0.4100846}
   m_UseDelaunayMesh: 0
---- !u!50 &153501914486135191
+--- !u!50 &525887684357954658
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153501914486135211}
+  m_GameObject: {fileID: 525887684357954654}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -210,7 +210,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!1 &6268686407780873392
+--- !u!1 &6022390423790055749
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7472633697037549430}
+  - component: {fileID: 7122774850248653443}
   m_Layer: 0
   m_Name: BulletSpawnpoint
   m_TagString: Untagged
@@ -226,18 +226,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7472633697037549430
+--- !u!4 &7122774850248653443
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268686407780873392}
+  m_GameObject: {fileID: 6022390423790055749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.7219999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 153501914486135209}
+  m_Father: {fileID: 525887684357954652}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
